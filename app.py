@@ -16,6 +16,6 @@ def password(Hint, len_of_pass):
 
 #Hint=input('Enter your password hint !! ')
 #len_of_pass=int(input('Enter the length of password : '))
-password(Hint,len_of_pass)
+#password(Hint,len_of_pass)
 
 Passgen = gradio.Interface(fn=password,inputs=['text','number'],outputs=['text']).launch()
