@@ -1,7 +1,7 @@
 #pip install gradio -q              for installing gradio module into your local host 
 import gradio
 import random
-def password(Hint,len_of_pass):
+def password(Hint, len_of_pass):
   hash=['~','!','@','#','$','0','1','2','3','4','5','6','7','8','9']
   shash=Hint
   for i in hash:
@@ -15,7 +15,7 @@ def password(Hint,len_of_pass):
   return scode
 
 Hint=input('Enter your password hint !! ')
-lenofpass=int(input('Enter the length of password : '))
-password(Hint,lenofpass)
+len_of_pass=int(input('Enter the length of password : '))
+password(Hint,len_of_pass)
 
 Passgen = gradio.Interface(fn=password,inputs=['text','number'],outputs=['text']).launch()
